@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume - Sarthak Hirpurkar</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div id="content">
+
+        <header>
+            <center> <h1>Sarthak Hirpurkar</h1></center>
+            <center> <p>Amravati, Maharashtra</p> </center>
+            <center>
+                <p><a href="tel:+918625920780">📞 +91 8625920780</a> | <a href="mailto:sarthakhirpurkarmh27@gmail.com">✉️ sarthakhirpurkarmh27@gmail.com</a></p>
+                <p><a href="https://www.linkedin.com/in/sarthakhirpurkar/" target="_blank">🔗LinkedIn</a> | <a href="https://github.com/sarthak2863" target="_blank">⚙️ GitHub</a></p>
+            </center>
+        </header>
+
+        <hr>
+
+        <section>
+            <h2>SKILLS</h2>
+            <p><strong>Languages:</strong> Python, MySQL.</p>
+            <p><strong>Coursework:</strong> OOPS, OS, DBMS, Data Structure, Computer Networks.</p>
+            <p><strong>Frontend Technology:</strong> HTML, CSS, JavaScript.</p>
+            <p><strong>Backend Technology:</strong> Flask.</p>
+            <p><strong>Libraries:</strong> Pandas, Numpy, Matplotlib.</p>
+        </section>
+        <hr> 
+        <section>
+            <h2>EDUCATION</h2>
+            <ul>
+                <li><strong>P. R. Pote Patil College of Engineering and Management</strong> (Jul 2023 - Jul 2025)<br><i>Master in Computer Application</i></li>
+                <li><strong>Shri Shivaji Science College</strong> (Jul 2020 - Jul 2023)<br><i>Bachelors in Computer Application</i></li>
+                <li><strong>Nagar Parishad Junior Science College</strong> (Jun 2019 - Jun 2020)<br><i>Electronics Science and Technology</i></li>
+                <li><strong>Nagar Parishad Vidyalaya</strong> (Jun 2017 - Jun 2018)</li>
+            </ul>
+        </section>
+        <hr>
+        <section>
+            <h2>PROJECTS</h2>
+            <article>
+                <h3><span style="text-decoration: underline;">GROCERY STORE MANAGEMENT SYSTEM</span></h3>
+                <p>• Developed a full-stack grocery store management system with a Flask backend, MySQL database, and HTML/CSS/JS frontend.</p>
+                <ul>
+                    <li>• Implemented product management features like adding, editing, and deleting products and UOMs.</li>
+                    <li>• Enhanced the order module by fixing item price calculation bugs and adding validation checks.</li>
+                </ul>
+            </article>
+            <article>
+                <h3><span style="text-decoration: underline;">RESPONSIVE DINING WEB INTERFACE</span></h3>
+                <p>• Developed a responsive website for a restaurant using modern front-end technologies (HTML, CSS, JavaScript).</p>
+                <ul>
+                    <li>• Implemented a visually appealing interface aligned with the restaurant's brand identity.</li>
+                    <li>• Streamlined online ordering and improved the customer experience.</li>
+                </ul>
+            </article>
+        </section>
+        <hr>
+
+        <section>
+            <h2>Extracurricular</h2>
+            <ul>
+                <li>• Member of the Organizing Team in the Stage Committee for the Annual Function 2022-2023.</li>
+                <li>• Member of the Discipline Committee in TECHFEST 2022-2023.</li>
+                <li>• Participant in the Quiz Competition at TECHFEST 2022-2023.</li>
+            </ul>
+        </section>
+        
+        <hr>
+        <section>
+            <h2>ACHIEVEMENTS</h2>
+            <ul>
+                <li>• Python Mastery: Essentials Certification from Scaler Academy in September 2024.</li>
+                <li>• MongoDB certification on AWS Cloud.</li>
+                <li>• Online course in front-end development (HTML, CSS).</li>
+                <li>• SQL Certification from HackerRank (Database Management).</li>
+            </ul>
+        </section>
+
+        <section>
+            <div class="right" style="flex-shrink: 0; margin-left: 1000px;">
+                <img src="profile.jpg" alt="Sarthak Hirpurkar" class="profile-image" style="width: 130px; height: 130px; border-radius: 50%; object-fit: cover;">
+            </div>
+        </section>
+
+        </div>
+
+    </div>
+
+    <div class="container d-flex justify-content-center mt-50 mb-50">
+        <div class="row">
+            <div class="col-md-12 text-right mb-3">
+                <button class="btn btn-primary" id="download">Download PDF</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("download").addEventListener("click", () => {
+            const content = document.getElementById("content");
+            const options = {
+                margin: 1,
+                filename: 'Sarthak_Hirpurkar_Resume.pdf',
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: { scale: 2 },
+                jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+            };
+            html2pdf().set(options).from(content).save();
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,101 @@
+body {
+  font-family: Georgia, 'Times New Roman', Times, serif, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f9f9f9;
+  color: #333;
+}
+
+.container {
+  max-width: 900px;
+  margin: 20px auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+header {
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2rem;
+  margin: 0 0 5px;
+}
+
+header p {
+  margin: 0;
+}
+
+h2 {
+  margin-bottom: 10px;
+  text-decoration: underline;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  margin-bottom: 10px;
+}
+
+.profile-image {
+  width: 50%;
+  height: 250px;           
+  border: 5px solid #fbfbfb;
+  max-width: 250px;
+  display: block;
+  margin: 0;
+  position: absolute;      
+  top: 30px;               
+  right: 510px;             
+}
+
+/* .profile-image {
+  width: 180px; /* Set fixed width */
+  height: 180px; /* Set fixed height */
+  border-radius: 50%; /* Make the image circular */
+  object-fit: cover; /* Ensure the image covers the container */
+  border: 5px solid #fbfbfb;
+  position: fixed; /* Fixed positioning */
+  top: 30px; /* Position from the top */
+  right: 50px; Position from the right
+} */
+
+
+@media print {
+  /* Ensure body and html take up full height */
+  body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+  }
+
+  .container {
+      page-break-before: always;
+      page-break-after: always;
+      padding: 20px;
+  }
+
+  /* Fix the profile image position during printing */
+  .profile-image {
+      position: fixed;  /* Keeps the image fixed in the same place */
+      top: 30px;
+      right: 100px;
+      width: 180px;  /* Ensure a fixed size */
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid #fbfbfb;
+      z-index: 1000;  /* Ensures it stays on top */
+  }
+
+  /* Hide unnecessary elements for print (e.g., background, extra images, etc.) */
+  .no-print {
+      display: none;
+  }
+}
+
